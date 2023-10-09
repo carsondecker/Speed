@@ -18,8 +18,8 @@ func _add_to_top(card: Card):
 
 #Deal top card from the deck
 #Remove Card from deck & return the Card
-func _deal():
-	deck.pop_back()
+func _deal() -> Card:
+	return deck.pop_back()
 
 #Shuffle deck
 func _shuffle():
@@ -31,6 +31,10 @@ func _fill_full_deck():
 	for i in range(1,14):
 		for j in suits:
 			deck.append(Card.new(i, j))
+
+#Return top card
+func _get_top() -> Card:
+	return deck.back()
 
 #Empty deck
 func _empty():

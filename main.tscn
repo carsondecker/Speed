@@ -1,20 +1,89 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm8qrulw8fu0j"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_480w5"]
-[ext_resource type="Script" path="res://Test.gd" id="1_htlsg"]
+[ext_resource type="PackedScene" uid="uid://bdhmrlyyifkqy" path="res://card.tscn" id="3_5kbj2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_480w5")
 
-[node name="Test" type="Node" parent="."]
-script = ExtResource("1_htlsg")
+[node name="Camera" type="Camera2D" parent="."]
 
-[node name="Node" type="Node" parent="."]
+[node name="Player1Card1" type="Node" parent="."]
 
-[node name="Node2" type="Node" parent="."]
+[node name="Card" parent="Player1Card1" instance=ExtResource("3_5kbj2")]
+position = Vector2(-425, 300)
 
-[node name="Node3" type="Node" parent="."]
+[node name="Player1Card2" type="Node" parent="."]
 
-[node name="Node4" type="Node" parent="."]
+[node name="Card" parent="Player1Card2" instance=ExtResource("3_5kbj2")]
+position = Vector2(-250, 300)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Player1Card3" type="Node" parent="."]
+
+[node name="Card" parent="Player1Card3" instance=ExtResource("3_5kbj2")]
+position = Vector2(-75, 300)
+
+[node name="Player1Card4" type="Node" parent="."]
+
+[node name="Card" parent="Player1Card4" instance=ExtResource("3_5kbj2")]
+position = Vector2(100, 300)
+
+[node name="Player1Card5" type="Node" parent="."]
+
+[node name="Card" parent="Player1Card5" instance=ExtResource("3_5kbj2")]
+position = Vector2(275, 300)
+
+[node name="Player1Deck" type="Node" parent="."]
+
+[node name="Card" parent="Player1Deck" instance=ExtResource("3_5kbj2")]
+position = Vector2(475, 325)
+
+[node name="Player2Card1" type="Node" parent="."]
+
+[node name="Card" parent="Player2Card1" instance=ExtResource("3_5kbj2")]
+position = Vector2(425, -300)
+
+[node name="Player2Card2" type="Node" parent="."]
+
+[node name="Card" parent="Player2Card2" instance=ExtResource("3_5kbj2")]
+position = Vector2(250, -300)
+
+[node name="Player2Card3" type="Node" parent="."]
+
+[node name="Card" parent="Player2Card3" instance=ExtResource("3_5kbj2")]
+position = Vector2(75, -300)
+
+[node name="Player2Card4" type="Node" parent="."]
+
+[node name="Card" parent="Player2Card4" instance=ExtResource("3_5kbj2")]
+position = Vector2(-100, -300)
+
+[node name="Player2Card5" type="Node" parent="."]
+
+[node name="Card" parent="Player2Card5" instance=ExtResource("3_5kbj2")]
+position = Vector2(-275, -300)
+
+[node name="Player2Deck" type="Node" parent="."]
+
+[node name="Card" parent="Player2Deck" instance=ExtResource("3_5kbj2")]
+position = Vector2(-475, -325)
+
+[node name="PlayPile1" type="Node" parent="."]
+
+[node name="Card" parent="PlayPile1" instance=ExtResource("3_5kbj2")]
+position = Vector2(150, 0)
+
+[node name="PlayPile2" type="Node" parent="."]
+
+[node name="Card" parent="PlayPile2" instance=ExtResource("3_5kbj2")]
+position = Vector2(-150, 0)
+
+[node name="DrawDeck1" type="Node" parent="."]
+
+[node name="Card" parent="DrawDeck1" instance=ExtResource("3_5kbj2")]
+position = Vector2(400, 0)
+
+[node name="DrawDeck2" type="Node" parent="."]
+
+[node name="Card" parent="DrawDeck2" instance=ExtResource("3_5kbj2")]
+position = Vector2(-400, 0)
