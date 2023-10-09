@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdhmrlyyifkqy"]
+
+[ext_resource type="Script" path="res://CardNode.gd" id="1_wvlpm"]
+[ext_resource type="Texture2D" uid="uid://b4k14l7b3fxkw" path="res://Assets/2_of_clubs.png" id="2_d18eu"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_wvlpm")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.325, 0.325)
+texture = ExtResource("2_d18eu")

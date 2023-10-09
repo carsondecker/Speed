@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm8qrulw8fu0j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_480w5"]
+[ext_resource type="Script" path="res://Test.gd" id="1_htlsg"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_480w5")
+
+[node name="Test" type="Node" parent="."]
+script = ExtResource("1_htlsg")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="Node3" type="Node" parent="."]
+
+[node name="Node4" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
