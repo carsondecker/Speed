@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdhmrlyyifkqy"]
 
-[ext_resource type="Script" path="res://CardNode.gd" id="1_wvlpm"]
-[ext_resource type="Texture2D" uid="uid://b4k14l7b3fxkw" path="res://Assets/2_of_clubs.png" id="2_d18eu"]
+[ext_resource type="Script" path="res://Scripts/CardNode.gd" id="1_wvlpm"]
+[ext_resource type="Texture2D" uid="uid://bm0onbm67grym" path="res://Assets/card_back.png" id="2_kiod6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewg2"]
 size = Vector2(150, 218)
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Node2D" groups=["Card"]]
 script = ExtResource("1_wvlpm")
 
 [node name="Area" type="Area2D" parent="."]
@@ -16,7 +16,24 @@ shape = SubResource("RectangleShape2D_eewg2")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_d18eu")
+texture = ExtResource("2_kiod6")
 
-[connection signal="mouse_entered" from="Area" to="." method="_on_area_mouse_entered"]
-[connection signal="mouse_exited" from="Area" to="." method="_on_area_mouse_exited"]
+[node name="Button" type="Button" parent="Sprite"]
+visibility_layer = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -363.0
+offset_right = -250.0
+offset_bottom = -363.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="Area" to="." method="_on_area_area_entered"]
+[connection signal="area_exited" from="Area" to="." method="_on_area_area_exited"]
+[connection signal="button_down" from="Sprite/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Sprite/Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Sprite/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite/Button" to="." method="_on_button_mouse_exited"]

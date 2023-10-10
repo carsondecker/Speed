@@ -19,6 +19,8 @@ func _add_to_top(card: Card):
 #Deal top card from the deck
 #Remove Card from deck & return the Card
 func _deal() -> Card:
+	if deck.is_empty():
+		return null
 	return deck.pop_back()
 
 #Shuffle deck
@@ -40,7 +42,14 @@ func _get_top() -> Card:
 func _empty():
 	deck.clear()
 
+#Return if empty
+func is_empty():
+	return deck.is_empty()
+
 #Print the deck
 func _print_deck():
 	for i in deck:
-		i._print()
+		if i == null:
+			print("null")
+		else:
+			i._print()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm8qrulw8fu0j"]
+[gd_scene load_steps=4 format=3 uid="uid://cm8qrulw8fu0j"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_480w5"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_480w5"]
+[ext_resource type="PackedScene" uid="uid://dqwxg2rr3su5o" path="res://deck.tscn" id="3_2gjkc"]
 [ext_resource type="PackedScene" uid="uid://bdhmrlyyifkqy" path="res://card.tscn" id="3_5kbj2"]
 
 [node name="Main" type="Node2D"]
@@ -35,7 +36,7 @@ position = Vector2(275, 300)
 
 [node name="Player1Deck" type="Node" parent="."]
 
-[node name="Card" parent="Player1Deck" instance=ExtResource("3_5kbj2")]
+[node name="Deck" parent="Player1Deck" instance=ExtResource("3_2gjkc")]
 position = Vector2(475, 325)
 
 [node name="Player2Card1" type="Node" parent="."]
@@ -65,25 +66,25 @@ position = Vector2(-275, -300)
 
 [node name="Player2Deck" type="Node" parent="."]
 
-[node name="Card" parent="Player2Deck" instance=ExtResource("3_5kbj2")]
+[node name="Deck" parent="Player2Deck" instance=ExtResource("3_2gjkc")]
 position = Vector2(-475, -325)
 
 [node name="PlayPile1" type="Node" parent="."]
 
-[node name="Card" parent="PlayPile1" instance=ExtResource("3_5kbj2")]
+[node name="Deck" parent="PlayPile1" instance=ExtResource("3_2gjkc")]
 position = Vector2(150, 0)
 
 [node name="PlayPile2" type="Node" parent="."]
 
-[node name="Card" parent="PlayPile2" instance=ExtResource("3_5kbj2")]
+[node name="Deck" parent="PlayPile2" instance=ExtResource("3_2gjkc")]
 position = Vector2(-150, 0)
 
 [node name="DrawDeck1" type="Node" parent="."]
 
-[node name="Card" parent="DrawDeck1" instance=ExtResource("3_5kbj2")]
-position = Vector2(400, 0)
+[node name="Deck" parent="DrawDeck1" instance=ExtResource("3_2gjkc")]
+position = Vector2(350, 0)
 
 [node name="DrawDeck2" type="Node" parent="."]
 
-[node name="Card" parent="DrawDeck2" instance=ExtResource("3_5kbj2")]
-position = Vector2(-400, 0)
+[node name="Deck" parent="DrawDeck2" instance=ExtResource("3_2gjkc")]
+position = Vector2(-350, 0)
